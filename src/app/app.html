@@ -1,40 +1,23 @@
-<!-- app.html -->
-<h2> El meu catàleg</h2>
+<h2>BINDINGS EN ANGULAR</h2>
 
-<!--SENE FOR - REPETITIU-->
+<!-- INTERPOLACIÓ : {{}} -> HTML {text} --->
+<!-- PROPERTY BINDING: [propietat]= 'expr' TS -> HTML (propietat DOM)-->
 
 
-<!--AMB @for una sola línia amb tants elements com calguin-->
-@for (ciutat of ciutats; track ciutat){
-    <p> {{ciutat}} </p>
-}
 
-<!--index es una variable especial que conté la posició de l'element (comença per 0)-->
-@for (ciutat of ciutats; track ciutat; let i = $index){
-    <p>{{i+1}}. {{ciutat}} </p>
-}
 
-<!-- @empty -->
 
-@for(ciutat of ciutats; track ciutat){
-    <p> {{ciutat}} </p>
-} @empty {
-    <p> No hi ha ciutats per mostrar</p>
-}
-
-@for (producte of productes; track producte.id; let i = $index){
-    <p> {{i+1}}. {{ producte.nom }}</p>
-    <app-tarjeta/>
-} @empty {
-    <p> No hi ha productes per mostrar</p>
-}
-
-<app-perfil />
-<app-perfil />
-
-<!-- crea un array de minim 5 elements al app.ts
-usa @for per mostrar els elements de l'array
-$index per mostrar l'ordre
+<!-- EVENT BINDING: (event) = "sentència" HTML -> TS
+   els paréntesis dien a angular: "quan passi el event del DOM sobre x element, executa la sentència" 
+   (click) = "afegir (p)" -> click -> crida afegir(p)
+   (dblclick)
+   (input) - cercador en directe (cada tecla dins d'un input)
+   (change) - <select>, chechbox - quan es confirma un canvi
+    (keyup.enter) / (keyup.enter) - en deixar anar una tecla, confirmar/cancelar
+    (mouseenter) / (mouseenter)
 -->
+    
+
+<app-botiga></app-botiga>
 
 <router-outlet />

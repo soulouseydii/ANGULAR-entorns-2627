@@ -4,10 +4,11 @@ import { Producte } from './interfaces/producte'; //PER PODER USAR LA iterface D
 import { Producte as ProducteClass } from './producte'; //Importem la classe PRODUCTE ASSIGANT UN ALIAS
 import { Tarjeta } from './components/tarjeta/tarjeta';
 import { Perfil } from './components/perfil/perfil';
+import { Botiga } from './bindings/botiga/botiga';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Tarjeta, Perfil],
+  imports: [RouterOutlet, Tarjeta, Perfil, Botiga],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
